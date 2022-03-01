@@ -1,10 +1,5 @@
 FROM archlinux:base-devel
 
-# WORKAROUND for glibc 2.33 and old Docker
-RUN patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst && \
-curl -LO "https://repo.archlinuxcn.org/x86_64/$patched_glibc" && \
-bsdtar -C / -xvf "$patched_glibc"
-
 # Get Japan mirrorlist from https://archlinux.org/mirrorlist/
 RUN curl "https://archlinux.org/mirrorlist/?country=JP&protocol=http&protocol=https&ip_version=4" -o /etc/pacman.d/mirrorlist && \
     sed -i -e "s/^#//" /etc/pacman.d/mirrorlist
