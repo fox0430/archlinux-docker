@@ -15,4 +15,10 @@ docker run -it fox0430/archlinux-docker:rust
 
 ```
 
+### Nim
+```
+docker run -it fox0430/archlinux-docker:nim
+
+```
+
 [dockerhub](https://hub.docker.com/repository/docker/fox0430/archlinux-docker)
