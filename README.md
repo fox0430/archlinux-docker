@@ -12,7 +12,6 @@ docker run -it fox0430/archlinux-docker
 ### Rust
 ```
 docker run -it fox0430/archlinux-docker:rust
-
 ```
 
 ### Nim
