@@ -1,9 +1,5 @@
 FROM archlinux:base-devel
 
-# Get Japan mirrorlist from https://archlinux.org/mirrorlist/
-RUN curl "https://archlinux.org/mirrorlist/?country=JP&protocol=http&protocol=https&ip_version=4" -o /etc/pacman.d/mirrorlist && \
-    sed -i -e "s/^#//" /etc/pacman.d/mirrorlist
-
 # Add user
 ARG USERNAME=arch
 ARG UID=1000
